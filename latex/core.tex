@@ -150,13 +150,7 @@
             {9}{{{\color{blue}9}}}1
 }
 
-% MATH
-\usepackage{amsmath}
-                                                    % \par\hfill$\blacksquare$
-                                                    % \par\hfill$\square$
 
-% Drawing
-\usepackage{tikz}
 
 % Tabular Data (Tables)
 \usepackage{array}
@@ -271,7 +265,7 @@
 % 4. <date>: Date of the handout (e.g., "Jan 15, 2025")
 % 5. <secondary info>: Additional info (e.g., "Scribe(s): Bob and Charlie")
 % 6. <number>: Handout number or identifier (used for page numbering)
-\usepackage{amssymb,amsmath} % Math symbols and environments
+\usepackage{amssymb,amsmath, tikz} % Math symbols and environments
 \newcommand{\handout}[6]{
    \renewcommand{\thepage}{#6-\arabic{page}} % Sets page numbering style to <number>-<page>
    \noindent
@@ -334,8 +328,25 @@
 %    {--}
 
 
+% Answer environment for responses
+% \answer[<color>] creates an answer environment with optional text color (default: teal).
+\newenvironment{answer}[1][redcolor]
+  {\newline\newline\color{#1}\noindent\textbf{Answer}: }
+  {\par\hfill$\square$\newline}
 
+% Prove environment for responses
+% \prove[<color>] creates an answer environment with optional text color (default: teal).
+\newenvironment{prove}[1][redcolor]
+  {\newline\newline\color{#1}\noindent\textbf{Answer}: }
+  {\par\hfill$\blacksquare$\newline}
+  
+% \begin{answer}
+%     <YOUR WORK GOES HERE> s
+% \end{answer}
 
+% \begin{prove}
+%     <YOUR WORK GOES HERE> s
+% \end{prove}
 
 
 
