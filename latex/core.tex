@@ -5,9 +5,13 @@
 % such as font size, margins, and the inclusion of external packages for 
 % enhanced functionality.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Suppress overfull and underfull box warnings
+\hbadness=10000
+\vbadness=10000
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % @requires
 % 1. VSCode extension: LaTeX Workshop by James Yu
-% 2. Command Palette (`Ctrl` + `Shift` + `P`) `Preferences: Open Keyboard Shortcuts (JSON)`
+% 2. Command Palette (`View` > `Command Palette`) `Preferences: Open Keyboard Shortcuts (JSON)`
 % 
 % [
 %   {
@@ -242,6 +246,94 @@
 % {CS-4460-B: Introduction to Information Visualization}                                % Course name (e.g., "CS-4460-B: Introduction to ...")
 % {Georgia Institute of Technology}                                                     % Institution (e.g., "Georgia Institute of Technology")
 % {Professor: Yalong Yang}                                                              % Professor name (e.g., "Yalong Yang")
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First Page Handout Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% General Handout Format
+% \handout{<title>}{<course name>}{<date>}{<author>}{<secondary info>}{<number>}
+% Creates a formatted header for handouts. Parameters:
+% 1. <title>: Title of the handout (e.g., "Lecture 1")
+% 2. <course name>: Name of the course (e.g., "CS 4510 Automata and Complexity")
+% 3. <author>: Name of the author (e.g., "Prof. Alice")
+% 4. <date>: Date of the handout (e.g., "Jan 15, 2025")
+% 5. <secondary info>: Additional info (e.g., "Scribe(s): Bob and Charlie")
+% 6. <number>: Handout number or identifier (used for page numbering)
+\usepackage{amssymb,amsmath} % Math symbols and environments
+\newcommand{\handout}[6]{
+   \renewcommand{\thepage}{#6-\arabic{page}} % Sets page numbering style to <number>-<page>
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{
+         \hbox to 5.78in { #2 \hfill #3 } % Course name and date
+         \vspace{4mm}
+         \hbox to 5.78in { {\Large \hfill #1 \hfill} } % Title centered
+         \vspace{2mm}
+         \hbox to 5.78in { {\it #4 \hfill #5} } % Author and secondary info
+      }
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+
+% Example Usages:
+% % 1. Lecture Handout
+% \handout
+%    {Lecture 1}
+%    {CS 4510 Automata and Complexity}{Prof. Alice}
+%    {Jan 15, 2025}{Scribe(s): Bob and Charlie}
+%    {1}
+
+% % 2. Homework Handout (CS 4510 / CS 4540)
+
+% \handout
+% {Homework 1: Finite Automata}
+% {\textbf{CS 4510 Automata and Complexity}}{Out: 01/08/2025}
+% { }{Due: 01/22/2025}
+% {1: Finite Automata}
+
+% \handout
+% {Problem Set 1} 
+% {\textsc{Georgia Tech} S'25}{CS 4540: \textsc{Advanced Algorithms}}
+% {Out: Jan 7}{Due: Jan 14 11.59 pm}
+% {CS 4540}
+
+
+% % 3. Exam Handout
+% \handout
+%    {Exam 1}
+%    {CS 4510 Automata and Complexity}{Dr. Smith}
+%    {Feb 5, 2025}{Duration: 3 hours}
+%    {1}
+
+% 4. Project Proposal
+% \handout
+%    {Project Proposal}
+%    {CS 4510 Automata and Complexity}{Prof. Alice}
+%    {Mar 1, 2025}{Team: Alpha Group}
+%    {1}
+
+% % 5. General Announcement
+% \handout
+%    {Midterm Announcement}
+%    {CS 4510 Automata and Complexity}{Prof. Alice}
+%    {Mar 10, 2025}{--}
+%    {--}
+
+
 
 
 
