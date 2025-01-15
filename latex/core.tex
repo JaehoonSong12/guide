@@ -284,69 +284,67 @@
 }
 
 % Example Usages:
-% % 1. Lecture Handout
-% \handout
-%    {Lecture 1}
-%    {CS 4510 Automata and Complexity}{Prof. Alice}
-%    {Jan 15, 2025}{Scribe(s): Bob and Charlie}
-%    {1}
+    % \handout
+    %    {Lecture 1}
+    %    {CS 4510 Automata and Complexity}{Prof. Alice}
+    %    {Jan 15, 2025}{Scribe(s): Bob and Charlie}
+    %    {1}
 
-% % 2. Homework Handout (CS 4510 / CS 4540)
+    % \handout
+    % {Homework 1: Finite Automata}
+    % {\textbf{CS 4510 Automata and Complexity}}{Out: 01/08/2025}
+    % { }{Due: 01/22/2025}
+    % {1: Finite Automata}
 
-% \handout
-% {Homework 1: Finite Automata}
-% {\textbf{CS 4510 Automata and Complexity}}{Out: 01/08/2025}
-% { }{Due: 01/22/2025}
-% {1: Finite Automata}
-
-% \handout
-% {Problem Set 1} 
-% {\textsc{Georgia Tech} S'25}{CS 4540: \textsc{Advanced Algorithms}}
-% {Out: Jan 7}{Due: Jan 14 11.59 pm}
-% {CS 4540}
+    % \handout
+    % {Problem Set 1} 
+    % {\textsc{Georgia Tech} S'25}{CS 4540: \textsc{Advanced Algorithms}}
+    % {Out: Jan 7}{Due: Jan 14 11.59 pm}
+    % {CS 4540}
 
 
-% % 3. Exam Handout
-% \handout
-%    {Exam 1}
-%    {CS 4510 Automata and Complexity}{Dr. Smith}
-%    {Feb 5, 2025}{Duration: 3 hours}
-%    {1}
+    % \handout
+    %    {Exam 1}
+    %    {CS 4510 Automata and Complexity}{Dr. Smith}
+    %    {Feb 5, 2025}{Duration: 3 hours}
+    %    {1}
 
-% 4. Project Proposal
-% \handout
-%    {Project Proposal}
-%    {CS 4510 Automata and Complexity}{Prof. Alice}
-%    {Mar 1, 2025}{Team: Alpha Group}
-%    {1}
+    % \handout
+    %    {Project Proposal}
+    %    {CS 4510 Automata and Complexity}{Prof. Alice}
+    %    {Mar 1, 2025}{Team: Alpha Group}
+    %    {1}
 
-% % 5. General Announcement
-% \handout
-%    {Midterm Announcement}
-%    {CS 4510 Automata and Complexity}{Prof. Alice}
-%    {Mar 10, 2025}{--}
-%    {--}
+    % \handout
+    %    {Midterm Announcement}
+    %    {CS 4510 Automata and Complexity}{Prof. Alice}
+    %    {Mar 10, 2025}{--}
+    %    {--}
 
 
 % Answer environment for responses
 % \answer[<color>] creates an answer environment with optional text color (default: teal).
 \newenvironment{answer}[1][redcolor]
-  {\newline\newline\color{#1}\noindent\textbf{Answer}: }
-  {\par\hfill$\square$\newline}
+  {\ \newline \ \newline\color{#1}\noindent\textbf{Answer}: }
+  {\ \newline\par\hfill$\square$\newline}
 
 % Prove environment for responses
 % \prove[<color>] creates an answer environment with optional text color (default: teal).
 \newenvironment{prove}[1][redcolor]
-  {\newline\newline\color{#1}\noindent\textbf{Answer}: }
-  {\par\hfill$\blacksquare$\newline}
+  {\ \newline \ \newline\color{#1}\noindent\textbf{Answer}: }
+  {\ \newline\par\hfill$\blacksquare$\newline}
+
   
+% % Example Usages:
+
 % \begin{answer}
-%     <YOUR WORK GOES HERE> s
+%   <YOUR WORK GOES HERE>
 % \end{answer}
 
 % \begin{prove}
-%     <YOUR WORK GOES HERE> s
+%   <YOUR WORK GOES HERE>
 % \end{prove}
+
 
 
 
@@ -362,3 +360,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                     % \textbf{boldfaced}
                                                     % \textit{intalicized}
+%%%% MATH underbrace
+% \[
+%     a + b + c = \underbrace{x + y + z
+%         }_{\text{
+%         Sum of terms
+%         }
+%         }
+% \]
